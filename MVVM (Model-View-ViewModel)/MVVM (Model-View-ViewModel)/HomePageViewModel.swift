@@ -6,21 +6,21 @@
 //
 
 import Foundation
+import RxSwift
 
 class HomePageViewModel {
-    var result = "0"
+    var result = BehaviorSubject<String>(value: "0")
+    var mrepo = MathematicalRepository()
+    
+    init () {
+        result = mrepo.result
+    }
     
     func sum(gotNumberOne: String, gotNumberTwo: String) {
-        if let no1 = Int(gotNumberOne), let no2 = Int(gotNumberTwo) {
-            let summation = no1 + no2
-            result = String(summation)
-        }
+        mrepo.sum(gotNumberOne: gotNumberOne, gotNumberTwo: gotNumberTwo)
     }
     
     func multi(gotNumberOne: String, gotNumberTwo: String) {
-        if let no1 = Int(gotNumberOne), let no2 = Int(gotNumberTwo) {
-            let multiply = no1 * no2
-            result = String(multiply)
-        }
+        mrepo.multi(gotNumberOne: gotNumberOne, gotNumberTwo: gotNumberTwo)
     }
 }

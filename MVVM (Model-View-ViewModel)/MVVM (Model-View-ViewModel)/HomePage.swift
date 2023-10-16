@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class HomePage: UIViewController {
 
@@ -17,20 +18,20 @@ class HomePage: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultLabel.text = homePageVM.result
+        _ = homePageVM.result.subscribe(onNext: { result in
+            self.resultLabel.text = result
+        })
     }
 
     @IBAction func sumButton(_ sender: Any) {
         if let no1 = numberOneTextField.text, let no2 = numberTwoTextField.text {
             homePageVM.sum(gotNumberOne: no1, gotNumberTwo: no2)
-            resultLabel.text = homePageVM.result
         }
     }
 
     @IBAction func multipleButton(_ sender: Any) {
         if let no1 = numberOneTextField.text, let no2 = numberTwoTextField.text {
             homePageVM.multi(gotNumberOne: no1, gotNumberTwo: no2)
-            resultLabel.text = homePageVM.result
         }
     }
     

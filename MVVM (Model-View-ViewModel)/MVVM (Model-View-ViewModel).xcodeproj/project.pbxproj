@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCA76CF22ADDE5EB00E9BF4B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DCA76CF12ADDE5EB00E9BF4B /* RxSwift */; };
+		DCA76CF42ADDE90200E9BF4B /* MathematicalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA76CF32ADDE90200E9BF4B /* MathematicalRepository.swift */; };
 		DCBE2BF52ADDE02E00B65B02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE2BF42ADDE02E00B65B02 /* AppDelegate.swift */; };
 		DCBE2BF72ADDE02E00B65B02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE2BF62ADDE02E00B65B02 /* SceneDelegate.swift */; };
 		DCBE2BF92ADDE02E00B65B02 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBE2BF82ADDE02E00B65B02 /* HomePage.swift */; };
@@ -17,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DCA76CF32ADDE90200E9BF4B /* MathematicalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathematicalRepository.swift; sourceTree = "<group>"; };
 		DCBE2BF12ADDE02E00B65B02 /* MVVM (Model-View-ViewModel).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM (Model-View-ViewModel).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCBE2BF42ADDE02E00B65B02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCBE2BF62ADDE02E00B65B02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA76CF22ADDE5EB00E9BF4B /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +66,7 @@
 				DCBE2BF62ADDE02E00B65B02 /* SceneDelegate.swift */,
 				DCBE2BF82ADDE02E00B65B02 /* HomePage.swift */,
 				DCBE2C082ADDE30700B65B02 /* HomePageViewModel.swift */,
+				DCA76CF32ADDE90200E9BF4B /* MathematicalRepository.swift */,
 				DCBE2BFA2ADDE02E00B65B02 /* Main.storyboard */,
 				DCBE2BFD2ADDE03000B65B02 /* Assets.xcassets */,
 				DCBE2BFF2ADDE03000B65B02 /* LaunchScreen.storyboard */,
@@ -86,6 +91,9 @@
 			dependencies = (
 			);
 			name = "MVVM (Model-View-ViewModel)";
+			packageProductDependencies = (
+				DCA76CF12ADDE5EB00E9BF4B /* RxSwift */,
+			);
 			productName = "MVVM (Model-View-ViewModel)";
 			productReference = DCBE2BF12ADDE02E00B65B02 /* MVVM (Model-View-ViewModel).app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,9 @@
 				Base,
 			);
 			mainGroup = DCBE2BE82ADDE02E00B65B02;
+			packageReferences = (
+				DCA76CF02ADDE5EB00E9BF4B /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = DCBE2BF22ADDE02E00B65B02 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA76CF42ADDE90200E9BF4B /* MathematicalRepository.swift in Sources */,
 				DCBE2C092ADDE30700B65B02 /* HomePageViewModel.swift in Sources */,
 				DCBE2BF92ADDE02E00B65B02 /* HomePage.swift in Sources */,
 				DCBE2BF52ADDE02E00B65B02 /* AppDelegate.swift in Sources */,
@@ -367,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCA76CF02ADDE5EB00E9BF4B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCA76CF12ADDE5EB00E9BF4B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA76CF02ADDE5EB00E9BF4B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCBE2BE92ADDE02E00B65B02 /* Project object */;
 }
